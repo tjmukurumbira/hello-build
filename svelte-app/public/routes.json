@@ -1,0 +1,29 @@
+{
+  "routes": [
+    {
+      "route": "/api/discounts",
+      "allowedRoles": ["preferred"]
+    },
+    {
+      "route": "/api/x/*",
+      "allowedRoles": ["preferred"]
+    },
+    {
+      "route": "/api/*",
+      "allowedRoles": ["authenticated"]
+    },
+    {
+      "route": "/.auth/login/facebook",
+      "statusCode": "404"
+    },
+    {
+      "route": "/.auth/login/google",
+      "statusCode": "404"
+    },
+    {
+      "route": "/*",
+      "serve": "/index.html",
+      "statusCode": 200
+    }
+  ]
+}
